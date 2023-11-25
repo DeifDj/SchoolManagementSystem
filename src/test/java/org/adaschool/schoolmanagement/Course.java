@@ -8,7 +8,7 @@ public class Course {
     private int numbercredist;
     private String version;
 
-    public Course(int id, String name, String description, int numbercredist, String version) {
+    public Course() {
         this.id = id;
         this.name = name;
         this.description = description;
@@ -54,6 +54,17 @@ public class Course {
 
     public void setVersion(String version) {
         this.version = version;
+    }
+
+    @Override
+    public String toString() {
+        return "Course{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", description='" + description + '\'' +
+                ", numbercredist=" + numbercredist +
+                ", version='" + version + '\'' +
+                '}';
     }
 }
 

@@ -1,6 +1,7 @@
 package org.adaschool.schoolmanagement;
 
 import Services.ServiciosAcademicosI;
+import org.adaschool.schoolmanagement.Course;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -9,12 +10,12 @@ import java.util.Map;
 
 public abstract class GestorAcademico implements ServiciosAcademicosI {
     private List<Student> students;
-    private List<Course> courses;
+    private List<Student> courses;
     private Map<Course, List<Student>> studentsByCourse;
 
     public GestorAcademico() {
         students = new ArrayList<>();
-        courses = new ArrayList<>();
+        courses = new ArrayList<Student>();
         studentsByCourse = new HashMap<>();
     }
 
@@ -30,11 +31,10 @@ public abstract class GestorAcademico implements ServiciosAcademicosI {
         }
     }
 
-    @Override
-    public void addCourse(Course course) {
+    public void addCourse(Student course) {
         if (!courses.contains(course)) {
             courses.add(course);
-            studentsByCourse.put(course, new ArrayList<>());
+           // List<Student> put = studentsByCourse.put(course, new ArrayList<>());
             System.out.println("Curso agregado correctamente.");
         } else {
             System.out.println("El curso ya existe.");
@@ -73,4 +73,7 @@ public abstract class GestorAcademico implements ServiciosAcademicosI {
         }
     }
 
+    public abstract void addClass(Course classes);
+
+    public abstract void addClass(Class classes);
 }

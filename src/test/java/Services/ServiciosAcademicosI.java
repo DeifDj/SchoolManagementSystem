@@ -3,14 +3,9 @@ package Services;
 import org.adaschool.schoolmanagement.Course;
 import org.adaschool.schoolmanagement.Student;
 
-public interface ServiciosAcademicosI {
+public interface ServiciosAcademicosI<S> {
 
     void enrollStudent(Student student);
-    void addClass(Course classes);
-
-    void addClass(java.lang.Class classes);
-
-    void addCourse(java.lang.Course course);
 
     void addCourse(Course course);
 
