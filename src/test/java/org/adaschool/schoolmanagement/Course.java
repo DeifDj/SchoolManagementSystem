@@ -1,6 +1,6 @@
 package org.adaschool.schoolmanagement;
 
-public class Class {
+public class Course {
 
     private int id;
     private String name;
@@ -8,7 +8,7 @@ public class Class {
     private int numbercredist;
     private String version;
 
-    public Class(int id, String name, String description, int numbercredist, String version) {
+    public Course(int id, String name, String description, int numbercredist, String version) {
         this.id = id;
         this.name = name;
         this.description = description;
