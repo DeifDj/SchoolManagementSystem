@@ -25,4 +25,4 @@ replay_pid*
 
 # Excluir directorios específicos
 /.idea
-/targetgit
+/target
